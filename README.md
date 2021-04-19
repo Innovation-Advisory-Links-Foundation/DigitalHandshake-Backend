@@ -37,17 +37,17 @@ You can learn more about the main challenges of building trust for digitally sig
 
 Figure 1 shows an example of the high-level overview of our solution's workflow for the digital handshake. As we can see, the different types of actors and process steps for the correct definition and conclusion of the agreement are presented. Specifically, there are two different categories of stakeholders:
 
-- Users. An individual registered on the platform and uniquely recognized in the blockchain through a human-readable address. The user can have the Dealer's role when it posts a request for a particular service (e.g., I need a website!) or Bidder's role when it proposes to satisfy a particular request for a service. A user can play both roles, one for each handshake.
+- **Users** An individual registered on the platform and uniquely recognized in the blockchain through a human-readable address. The user can have the Dealer's role when it posts a request for a particular service (e.g., I need a website!) or Bidder's role when it proposes to satisfy a particular request for a service. A user can play both roles, one for each handshake.
 
-- Jurors. Professionals or legal experts recorded on the platform assisting parties in the judgment of a dispute. It does not have a concrete motivation to participate in the handshake but is interested in receiving new dispute assignments to increase earnings.
+- **Jurors** Professionals or legal experts recorded on the platform assisting parties in the judgment of a dispute. It does not have a concrete motivation to participate in the handshake but is interested in receiving new dispute assignments to increase earnings.
 
 The on-chain business logic is broken down into three smart contracts, where each solves a particular function:
 
-- Token. A standard ERC20 token (DHS) offers price stability when making any form of payment.
+- **Token** A standard ERC20 token (DHS) offers price stability when making any form of payment.
 
-- Service. All features for stipulating digital handshakes. Interacts with the escrow for automating token redistribution according to handshake status.
+- **Service** All features for stipulating digital handshakes. Interacts with the escrow for automating token redistribution according to handshake status.
 
-- Escrow. A service that locks amounts of DHS tokens for automating payments.
+- **Escrow** A service that locks amounts of DHS tokens for automating payments.
 
 ## Backend
 
