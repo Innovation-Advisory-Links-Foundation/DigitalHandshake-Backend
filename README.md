@@ -58,7 +58,7 @@ The on-chain business logic is broken down into three smart contracts, where eac
         alt="Architecture"
     />
     </div>
-<p align="center"> <i>Figure 1.</i> The high-level overview of Digital Handshake architecture. </p>
+<p align="center"> <i>Figure 2.</i> The high-level overview of Digital Handshake architecture. </p>
 
 Figure 2 shows the architecture of the proof-of-concept of a decentralized application (dApp). The backend is entirely Dockerized: there are containers for blockchain nodes, a server and an off-chain database instance. The blockchain nodes can be started, populated as needs, stopped and restarted using provided scripts, both for development and testing nodes. The server contains a running instance of a rest API which provides communication with the MongoDB instance. The off-chain database is necessary to store personal user data (encrypted with the user's private key) and a repository for long contractual terms and other textual information. The data integrity is continuously verified through a double timestamping mechanism (storing hashes on and off-chain). The backend contains the implementation of the Token, Service and Escrow smart contracts with the test files for each case.
 
