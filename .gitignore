@@ -1,0 +1,21 @@
+node_modules
+.env
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Mocha test results
+test/test-results.xml
+
+# Typescript generated .js files
+*.js
+!_*.js
+*.js.map
+!_*.js.map
+dist/
+eosio/data
+eosio/data_test

@@ -1,0 +1,65 @@
+[
+  {
+    "name": "alice",
+    "privateKeyOwner": "5KBM2BoeW8NV1QPwoDcU1FHm8GCRFJvnhjTgbncp8TmzDgsAWAL",
+    "publicKeyOwner": "EOS8G5cQi6qXSTEgSuXBMABfufagZUCHQJenXPngbVx4sgkqgf3JR",
+    "privateKeyActive": "5KSbmHLzCEn4uyFKxHco7hw41U9Usp56wuzCDnxQvNJGdhiAQN9",
+    "publicKeyActive": "EOS6jtFSyaquwrLcmhNrMnfwbNMebH52Cvu4K3bhK5VF7ibw4QbHW",
+    "role": 0,
+    "externalDataHash": "2BD806C97F0E00AF1A1FC3328FA763A9269723C8DB8FAC4F93AF71DB186D6E90"
+  },
+  {
+    "name": "bob",
+    "privateKeyOwner": "5KUCcjVU9gDibgZpNTDQuyHAaTiFvnGxzhteG4w2yHwLMUmQLY8",
+    "publicKeyOwner": "EOS4wYyvuN4isxVqbaiqXzoiUzAmE9RGDQ6aNhXpJvazkXQfRhu6K",
+    "privateKeyActive": "5KhvYTyFxGYzBW5uTFyfgm1pvUYgAgaMV3nfghKsKHKqf58GbPW",
+    "publicKeyActive": "EOS4uFPrrC4nFAKKL21GsrsVthSyxtjVXMxoQUC83U61EgxgVJA89",
+    "role": 0,
+    "externalDataHash": "81B637D8FCD2C6DA6359E6963113A1170DE795E4B725B84D1E0B4CFD9EC58CE9"
+  },
+  {
+    "name": "charlie",
+    "privateKeyOwner": "5KezKtQEF48W1DJTZPsBnF5mCnVshDoJg8drtgpoqx5wxjtRZR6",
+    "publicKeyOwner": "EOS88TLorPpfFJBQ5o56R3GVD7uxAs4zucfpXyqCnjLNJQo3hJ5Sz",
+    "privateKeyActive": "5Ki4inecRuYzUwgCaaUDUZDDXdvWS3za1vBEeY7jRZrGjnDcx8r",
+    "publicKeyActive": "EOS7mixaVhHQLpUgQL4ieYau4JmQgUH6RgjQkt876AW7gehBFFMUa",
+    "role": 0,
+    "externalDataHash": "B9DD960C1753459A78115D3CB845A57D924B6877E805B08BD01086CCDF34433C"
+  },
+  {
+    "name": "mark",
+    "privateKeyOwner": "5JieaUbMf1ahdD87detXA8g8KDpKU2Bsn4SfRmG1MsCcqk1HDqV",
+    "publicKeyOwner": "EOS6L77u79ckjuPGgmW7eibmX4xxmE4DvNiGtADwBTZhoByL5NeAR",
+    "privateKeyActive": "5JKjxapf5SnbxQVWmUofSjVPe71g4DsxbC9xC2nR7GViDc7gZ3u",
+    "publicKeyActive": "EOS5nCWHY38NiM3SmtJtGgN4ssgyYmFstrXCN3XK6Czgi28VAs6vC",
+    "role": 1,
+    "externalDataHash": "6201EB4DCCC956CC4FA3A78DCA0C2888177EC52EFD48F125DF214F046EB43138"
+  },
+  {
+    "name": "sarah",
+    "privateKeyOwner": "5KamF2DGUMW5oLXgwLTAPi2DGTEVQDT4xAw5GMWfg8JWq3VpLfi",
+    "publicKeyOwner": "EOS56i1oSK73jsjaYAXociALNSZYRQ7tD4SQcQxoSTVV5iF7qQRYN",
+    "privateKeyActive": "5Ja6bo7xNGVZRfckwkxyGgXrpKNTGt1MDq4EmfyVifWL5idanAL",
+    "publicKeyActive": "EOS7LDjqbSSAapjaZDagXBiEM4gmJ1Ehq5YnPKpMiH6fon9wNKJF4",
+    "role": 1,
+    "externalDataHash": "D233633D9524E84C71D6FE45EB3836F8919148E4A5FC2234CC9E6494EC0F11C2"
+  },
+  {
+    "name": "rick",
+    "privateKeyOwner": "5KfmBaThSur5Z84888WbqpAVAYvKzgrWMNtE2XpkZDh6XN9FBA1",
+    "publicKeyOwner": "EOS6JP4GrfDk6dJXgDKJXVJg4Ncuz24qBsX5gRDUXxLRvmENd8hYG",
+    "privateKeyActive": "5HwSSH3ioufRLWpm5RjfcESi2b58BGUJKzFNJqvGzZ5ECpfmZgu",
+    "publicKeyActive": "EOS81L4wrKHG94rPnj2bpGKySD38XEv7QUWBhPUSBCcu7AUhPabvX",
+    "role": 1,
+    "externalDataHash": "5EFC60B80FA21BAA18D66C9A9C33C51E2B87FBA0876709D4C8909AA3ED7FBBDE"
+  },
+  {
+    "name": "oscar",
+    "privateKeyOwner": "5KJC8oyYHnnErUSuZLtC3iXxdunxiBnsF8i5QX4tT1eFe2DDadz",
+    "publicKeyOwner": "EOS6icZaxwqeMoYHVE8nWjQDpo5ftHJpu6HxWNvLqb3cMqsxJXp7t",
+    "privateKeyActive": "5JUYzgrR7EgPEMM8jx1qNdXA8tjV1hebqZqiUfuuvGcyttTAorH",
+    "publicKeyActive": "EOS71EXB2Szr77M344xiRTQ88z7BeHLDexg29JkhsgLSyzXi2YYui",
+    "role": 0,
+    "externalDataHash": "F5A1971C2EF02A5AB2263F20895B14E7AC1607D21D28805CA8A7ED31EF802364"
+  }
+]

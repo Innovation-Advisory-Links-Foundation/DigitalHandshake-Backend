@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+readonly MAX_SUPPLY_QUANTITY="1000000000.0000"
+readonly ISSUE_SUPPLY_QUANTITY_USER="1000.0000"
+readonly TOKEN_SYMBOL="DHS"
