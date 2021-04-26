@@ -2,12 +2,11 @@
 
 **A blockchain-based solution for making digital handshakes guaranteeing transparency on identity, code and payments.**
 
-- Building a new concept of trust from platform to code through an EOSIO blockchain-based solution.
-- Democratic and decentralized dispute mechanism involving the selection of pseudo-random professionals reducing the cost-benefit ratio.
-- Decentralized escrow service designed to secure tokens payments and automatically redistribute amounts based on handshake status.
-- Accelerates the digitalization process for those who cannot sustain the costs by providing a unique and priceless digital identity.
+- Building a new form of trust in the digital handshake process (from platform to code) through an EOSIO blockchain-based solution.
+- Fair and decentralized dispute resolution with a pseudo-random selection of jurors for reducing the cost-benefit ratio.
+- Automatic token payments through a decentralized and bulletproof escrow service.
 
-You can learn more about the main challenges of building trust for digitally signed handshake agreements to the article on our [OverTheBlock Medium](https://medium.com/overtheblock/) page.
+You can learn more about the main challenges of building trust for digital handshakes on the article on our [OverTheBlock Medium](https://medium.com/overtheblock/) page.
 
 ## Table of Contents
 
@@ -35,19 +34,17 @@ You can learn more about the main challenges of building trust for digitally sig
     </div>
 <p align="center"> <i>Figure 1.</i> The high-level overview of Digital Handshake workflow. </p>
 
-Figure 1 shows an example of the high-level overview of our solution's workflow for the digital handshake. As we can see, the different types of actors and process steps for the correct definition and conclusion of the agreement are presented. Specifically, there are two different categories of stakeholders:
+- **Users**. An individual or entity registered on the platform and uniquely recognized in the blockchain through a human-readable address. The user can have the Dealer's role when it posts a request for a particular service (e.g., I need a website!) or Bidder's role when it proposes itself for satisfying a specific demand. A user can play both roles, one for each handshake.
 
-- **Users** An individual registered on the platform and uniquely recognized in the blockchain through a human-readable address. The user can have the Dealer's role when it posts a request for a particular service (e.g., I need a website!) or Bidder's role when it proposes to satisfy a particular request for a service. A user can play both roles, one for each handshake.
-
-- **Jurors** Professionals or legal experts recorded on the platform assisting parties in the judgment of a dispute. It does not have a concrete motivation to participate in the handshake but is interested in receiving new dispute assignments to increase earnings.
+- **Jurors**. Professionals or legal experts recorded on the platform. They assist the parties in the judgment of a dispute. They do not have a concrete motivation to participate in the handshake but are interested in receiving new dispute assignments to increase earnings.
 
 The on-chain business logic is broken down into three smart contracts, where each solves a particular function:
 
-- **Token** A standard ERC20 token (DHS) offers price stability when making any form of payment.
+- **Token**. A standard ERC20 token (DHS) offers price stability when making any form of contactless payment.
 
-- **Service** All features for stipulating digital handshakes. Interacts with the escrow for automating token redistribution according to handshake status.
+- **Service**. All features for making digital handshakes.
 
-- **Escrow** A service that locks amounts of DHS tokens for automating payments.
+- **Escrow**. A service that locks amounts of DHS tokens for automating payments.
 
 ## Backend
 
@@ -60,7 +57,7 @@ The on-chain business logic is broken down into three smart contracts, where eac
     </div>
 <p align="center"> <i>Figure 2.</i> The high-level overview of Digital Handshake architecture. </p>
 
-Figure 2 shows the architecture of the proof-of-concept of a decentralized application (dApp). The backend is entirely Dockerized: there are containers for blockchain nodes, a server and an off-chain database instance. The blockchain nodes can be started, populated as needs, stopped and restarted using provided scripts, both for development and testing nodes. The server contains a running instance of a rest API which provides communication with the MongoDB instance. The off-chain database is necessary to store personal user data (encrypted with the user's private key) and a repository for long contractual terms and other textual information. The data integrity is continuously verified through a double timestamping mechanism (storing hashes on and off-chain). The backend contains the implementation of the Token, Service and Escrow smart contracts with the test files for each case.
+The backend is entirely [Dockerized](https://www.docker.com/): containers for [EOSIO](https://eos.io/) blockchain nodes, a server and an off-chain database instance. The blockchain nodes can be started, populated as needs, stopped and restarted using provided scripts, both for development and testing nodes. The server contains a running instance of a rest API which provides communication with the [MongoDB](https://www.mongodb.com/) instance. The off-chain database is necessary to store personal user data (encrypted with the user's private key) and a repository for long contractual terms and other textual information related to the handshake process. The data integrity is continuously verified through a double timestamping mechanism (storing hashes on and off-chain). The backend contains the Token, Service and Escrow smart contracts in C++ with the related test files for each feature and use cases.
 
 ## Getting Started
 
@@ -110,11 +107,11 @@ DB_USER=
 DB_PASS=
 ```
 
-- The `SERVER_ENDPOINT` and `SERVER_PORT` defines the connection endpoint (URL) and port for the Express Rest API server to talk with the MongoDB instance (`SERVER_TEST_URL` for testing purposes only).
+- The `SERVER_ENDPOINT` and `SERVER_PORT` are the connection endpoint (URL) and port for the [Express](https://expressjs.com/) Rest API server to talk with the MongoDB instance (`SERVER_TEST_URL` for testing purposes only).
 - The `EOSIO_TEST_URL` and `EOSIO_TEST_CHAIN_ID` are the configuration for the local EOSIO node used for running tests (you can find the configuration of the development node on `eosio/eosio_node_start.sh` script).
 - The `MONGO_DB_ENDPOINT` and `MONGO_DB_DATABASE` defines the configuration endpoint for the MongoDB instance (`MONGO_DB_TEST_URL` and `MONGO_DB_TEST_DATABASE` for testing purposes only).
 
-To compile the smart contract C++ code, you will need the eosio CDT installed on your machine. This creates a new root folder `compiled/` containing the `.abi` and `.wasm` smart contract compilation files.
+To compile the smart contract C++ code, you will need the [EOSIO CDT](https://github.com/EOSIO/eosio.cdt) installed on your machine (you can follow this [guide](https://developers.eos.io/welcome/latest/getting-started-guide/index)). This creates a new root folder `compiled/` containing the `.abi` and `.wasm` smart contract compilation files.
 
 To run the smart contracts compilation:
 
@@ -132,13 +129,13 @@ EOSIO will occupy the ports **8888** and **9876**. Make sure nothing else is alr
 
 The `eosio/` folder contains the smart contracts and the necessary scripts to run the nodes.
 
-To start eosio with Docker in development mode:
+To start EOSIO with Docker in development mode:
 
 ```bash
 npm run start:eosio-dev
 ```
 
-To restart eosio with Docker in development mode:
+To restart EOSIO with Docker in development mode:
 
 ```bash
 npm run restart:eosio-dev
@@ -146,11 +143,11 @@ npm run restart:eosio-dev
 
 #### Test Node
 
-You can run an EOSIO node for testing in parallel with the development container to run smart contract tests in a production-like environment. You need to change the `--dev` above with `--test`.
+You can run an EOSIO node for testing to run smart contract tests in a production-like environment. You need to change the `--dev` above with `--test`. The dev and test nodes can run in parallel.
 
 EOSIO test node will occupy the ports **8889** and **9877**. Make sure nothing else is already running on these ports.
 
-To start EOSIO with Docker in testing mode (nb. this will not run any test!):
+To start the EOSIO node with Docker for testing:
 
 ```bash
 npm run start:eosio-test
@@ -160,9 +157,9 @@ npm run start:eosio-test
 
 MongoDB and Express server will occupy the ports **8080** and **27017**. Make sure nothing else is already running on these ports.
 
-We have created a Docker compose file (`docker-compose.yml`) to facilitate the configuration and necessary onboarding for running a MongoDB and a NodeJS Express server communicating instances in Docker containers.
+We have created a Docker compose file (`docker-compose.yml`) to facilitate the configuration and necessary onboarding for running a MongoDB and a NodeJS Express server, both communicating in separated Docker containers.
 
-Run to start the server:test
+Run to start the server:
 
 ```bash
 npm run docker:compose
@@ -170,13 +167,13 @@ npm run docker:compose
 
 ### Testing
 
-To run tests the EOSIO smart contracts (nb. this command will start the EOSIO node for testing):
+Run to test the EOSIO smart contracts (nb. this command will start the EOSIO node for testing):
 
 ```bash
 npm run test:eosio
 ```
 
-To run tests for the NodeJS server and MongoDB:
+Run to test the NodeJS server API for MongoDB:
 
 ```bash
 npm run test:server
